@@ -1,9 +1,10 @@
+import random
 class Hero:
     
     def __init__(self, name):
         self.name = name
-        self.health = 100
-        self.attack_power = 20
+        self.health = random.randint(100, 151)
+        self.attack_power = random.randint(10, 26)
         
     def attack(self):
         return random.randint(1, self.attack_power)
@@ -14,4 +15,4 @@ class Hero:
     def is_alive(self):
         return self.health > 0
 
-    pass
+    
